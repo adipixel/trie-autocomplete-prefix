@@ -26,7 +26,7 @@ prefix = "al"
 result = myTrie.getWords(prefix)
 ```
 Results:
-This returns the children and the word count (number, dict) pair
+This returns the children and the word count (number, list) pair
 ```
 result -> 3, ['all', 'also', 'already']
 ```
