@@ -15,6 +15,7 @@ myTrie = Trie()
 ```
 myTrie.addWord("all")
 myTrie.addWord("also")
+myTrie.addWord("application")
 myTrie.addWord("already")
 ```
 
@@ -27,5 +28,5 @@ result = myTrie.getWords(prefix)
 Results:
 This returns the children and the word count (number, dict) pair
 ```
-result -> 3, {'l': <>, 's': <>, 'r': <>}
+result -> 3, ['all', 'also', 'already']
 ```
