@@ -15,8 +15,7 @@ class TrieNode:
 
         # create a trie node and link it
         self.children[letter] = TrieNode()
-        if not validFlag:
-            self.validFlag = validFlag
+        self.children[letter].validFlag = validFlag
         self.words += 1
         return(self.children[letter])
 
@@ -49,23 +48,8 @@ class Trie:
             if x in node.children:
                 node = node.children[x]
             else:
-                return -1, None
-        return node.words, node.children
-
-
-# driver function
-def main():
-    t = Trie()
-    t.addWord("tree")
-    t.addWord("trie")
-    t.addWord("algo")
-    t.addWord("assoc")
-    t.addWord("all")
-    t.addWord("also")
-
-    prefix = "al"
-    words, children = t.getChildren(prefix) # words: 3, children: g, l, s
-    print(words, children)
-
-
-main()
+                return 0, None
+        if node.validFlag:
+            return node.words+1, node.children
+        else:
+            return node.words, node.children
