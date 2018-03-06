@@ -1,5 +1,6 @@
 # Trie API
 Simple Trie data structure API usually used for fast reTRIEval of words for autocomplete.
+Import it and make your dictionary superfast
 
 ### Import API
 ```
@@ -30,3 +31,5 @@ This returns the children and the word count (number, list) pair
 ```
 result -> 3, ['all', 'also', 'already']
 ```
+
+
